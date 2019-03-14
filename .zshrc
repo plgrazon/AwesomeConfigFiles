@@ -10,6 +10,9 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
+# Remove theme to use Powerlevel9K
+# ZSH_THEME=""
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -95,19 +98,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Default path
+# Default path on WSL
 cd /mnt/c/Users/biosync
 
-# Limit path to depth of 2
+# Limit path to depth of 2 on agnoster:
 prompt_dir() {
   prompt_segment blue black '%2~'
 }
 
-# Shorten initial path
+# Shorten initial path on agnoster
 prompt_context() {}
 
 # Colorls shortcut
 alias lc='colorls -lA --sd'
+
+# Iterm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
