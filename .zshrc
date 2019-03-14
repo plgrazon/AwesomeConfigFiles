@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # Default path
 cd /mnt/c/Users/biosync
 
-# Dir: current working directory
+# Limit path to depth of 2
 prompt_dir() {
   prompt_segment blue black '%2~'
 }
