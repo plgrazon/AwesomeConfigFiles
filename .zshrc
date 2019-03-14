@@ -103,7 +103,7 @@ prompt_dir() {
   prompt_segment blue black '%2~'
 }
 
-# Shorten intial path
+# Shorten initial path
 prompt_context() {}
 
 # Colorls shortcut
