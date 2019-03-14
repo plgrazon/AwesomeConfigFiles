@@ -11,6 +11,7 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
 ### ZSH
 
 - colorls
+  - ls - alias
 - themes:
   - agnoster
   - powerlevel9k/powerlevel9k
