@@ -109,6 +109,16 @@ prompt_dir() {
 # Shorten initial path on agnoster
 prompt_context() {}
 
+# Powerlevel9k
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator todo background_jobs load disk_usage ram swap)
+
+# DIR length
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
 # Colorls shortcut
 alias lc='colorls -lA --sd'
 

@@ -27,3 +27,15 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
   - install using homebrew
   - to use remove theme from .zshrc
 - nerd fonts
+- todo-txt
+
+### TERMINAL APPS
+
+- tmux
+- ranger
+- w3m
+- atop
+- htop
+- vnstat
+- vim
+- todo.txt-cli
