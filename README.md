@@ -29,6 +29,14 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
 - nerd fonts
 - todo-txt
 
+### VIM
+
+- NERDTree
+  - ctrl + N binding
+- VIM Plug
+  :PlugInstall
+- Pathogen
+
 ### TERMINAL APPS
 
 - tmux
