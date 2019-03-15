@@ -10,8 +10,11 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-# Remove theme to use Powerlevel9K
+# Remove theme to use Powerlevel9K on mac
 # ZSH_THEME=""
+
+# On Linux:
+# ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,17 +105,22 @@ source $ZSH/oh-my-zsh.sh
 cd /mnt/c/Users/biosync
 
 # Limit path to depth of 2 on agnoster:
-prompt_dir() {
-  prompt_segment blue black '%2~'
-}
+# prompt_dir() {
+#   prompt_segment blue black '%2~'
+# }
 
 # Shorten initial path on agnoster
-prompt_context() {}
+# prompt_context() {}
 
 # Powerlevel9k
-source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+# Homebrew
+# source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir_writable dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator todo background_jobs load disk_usage ram swap)
+
+# Linux 
+# Use if installed by cloning
+# POWERLEVEL9K_MODE="nerdfont-complete"
 
 # DIR length
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
@@ -121,6 +129,13 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # Colorls shortcut
 alias lc='colorls -lA --sd'
+
+# Todo-Txt
+# Linux
+alias todo='todo-txt'
+# Mac
+alias todo='todo.sh'
+
 
 # Iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
