@@ -47,3 +47,5 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
 - vnstat
 - vim
 - todo.txt-cli
+  - graph
+  - donow
