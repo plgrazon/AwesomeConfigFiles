@@ -137,7 +137,6 @@ alias todo='todo-txt'
 # Mac
 alias todo='todo.sh'
 
-
 # Iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
