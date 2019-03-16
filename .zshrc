@@ -128,6 +128,9 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
+# Add 256 Term color support
+export TERM="xterm-256color"
+
 # Colorls shortcut
 alias lc='colorls -lA --sd'
 
