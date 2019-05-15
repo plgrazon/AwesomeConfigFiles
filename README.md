@@ -36,6 +36,9 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
 - VIM Plug
   :PlugInstall
 - Pathogen
+- Vim-airline
+- Vim-airline-themes
+- YouCompleteMe
 
 ### TERMINAL APPS
 
@@ -49,6 +52,7 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
 - todo.txt-cli
   - graph
   - donow
+  - note
 
 ### Todo-Cli
 
@@ -64,5 +68,3 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
     - create a folder named: ~/.todo.actions.d
     - chmod +x ~/.todo.actions.d/<action>
     - use dostounix to excute file (Mac)
-  - Mac:
-    - graph

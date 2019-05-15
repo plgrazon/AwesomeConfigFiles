@@ -1,5 +1,6 @@
 " Set 256 colors for Vim
-set t_Co=256'
+set t_Co=256
+set background=dark
 
 " Add row number
 set number
@@ -39,10 +40,16 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'mattn/emmet-vim'
+Plug 'Valloric/YouCompleteMe'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'Valloric/MatchTagAlways'
 Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+" Vim-airline
+let g:airline_powerline_fonts = 1
 
 " Nerdtree
 " Open Nerdtree on start
