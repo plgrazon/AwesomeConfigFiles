@@ -1,5 +1,6 @@
 " Set 256 colors for Vim
 set t_Co=256
+colorscheme desert
 set background=dark
 
 " Add row number
@@ -20,7 +21,7 @@ autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 
-" Emmet for autocmplete
+" Emmet for autocomplete
 let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
@@ -46,10 +47,13 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Vim-airline
 let g:airline_powerline_fonts = 1
+let g:airline_section_z = "%p%% : \ue0a1:%l/%L : \ue0a3:%c"
+let g:airline#extensions#whitespace#symbol = 'Ξ'
 
 " Nerdtree
 " Open Nerdtree on start
@@ -58,6 +62,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Open Nerdtree with Ctrl + N
 map <C-n> :NERDTreeToggle<CR>
+" Show hidden files
+let NERDTreeShowHidden=1
 
 " Pathogen plugin manager
 execute pathogen#infect()
