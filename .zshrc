@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/biosync/.oh-my-zsh"
+export ZSH="/home/biosync/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -137,9 +137,12 @@ alias todo='todo-txt'
 # Mac
 alias todo='todo.sh'
 
-
 # Iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Mac
+# Add color support for tmux on mac and to remove error (iTerm2)
+export TERM="xterm-256color"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
