@@ -1,4 +1,4 @@
-" Set 256 colors for Vim
+" Set 256 colors from Vim
 set t_Co=256
 colorscheme desert
 set background=dark
@@ -6,16 +6,16 @@ set background=dark
 " Add row number
 set number
 
-" Add backspace functionality
+" Add bakspace functionality
 set backspace=indent,eol,start
 
 " Set spacing to default to spaces
 set tabstop=2 shiftwidth=2 expandtab
 
-" Prettier
+"Prettier
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html $
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.ht    ml $
 
 " JavaScript syntax
 let g:javascript_plugin_jsdoc = 1
@@ -41,7 +41,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'mattn/emmet-vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'Valloric/MatchTagAlways'
 Plug 'scrooloose/nerdtree'
@@ -63,7 +63,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Open Nerdtree with Ctrl + N
 map <C-n> :NERDTreeToggle<CR>
 " Show hidden files
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 
 " Pathogen plugin manager
 execute pathogen#infect()
