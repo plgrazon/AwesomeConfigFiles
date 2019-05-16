@@ -1,3 +1,9 @@
+" Set line ending for unix:
+set ff=unix
+
+" Set line ending for dos:
+" set ff=dos
+
 " Set 256 colors from Vim
 set t_Co=256
 colorscheme desert
@@ -45,6 +51,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'Valloric/MatchTagAlways'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -64,6 +71,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 " Show hidden files
 let NERDTreeShowHidden = 1
+" Show git status for files
+let g:NERDTreeShowIgnoredStatus = 1
 
 " Pathogen plugin manager
 execute pathogen#infect()

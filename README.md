@@ -39,6 +39,7 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
 - Vim-airline
 - Vim-airline-themes
 - YouCompleteMe
+- Nerdtree-git-plugin
 
 ### TERMINAL APPS
 
