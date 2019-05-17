@@ -22,6 +22,9 @@ set tabstop=2 shiftwidth=2 expandtab
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html $
+" print semicolons
+" Prettier default: true
+let g:prettier#config#semi = 'true'
 
 " JavaScript syntax
 let g:javascript_plugin_jsdoc = 1
