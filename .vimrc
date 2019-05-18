@@ -1,7 +1,7 @@
-" Set line ending for unix:
+" Set line ending for unix
 set ff=unix
 
-" Set line ending for dos:
+" Set line ending for dos
 " set ff=dos
 
 " Set 256 colors from Vim
@@ -21,7 +21,10 @@ set tabstop=2 shiftwidth=2 expandtab
 "Prettier
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.ht    ml $
+autocmd BufWritePre,TextChanged *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html $
+" print semicolons
+" Prettier default: true
+let g:prettier#config#semi = 'true'
 
 " JavaScript syntax
 let g:javascript_plugin_jsdoc = 1
