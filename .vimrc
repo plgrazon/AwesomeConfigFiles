@@ -12,31 +12,19 @@ set background=dark
 " Add row number
 set number
 
-" Add bakspace functionality
+" Add backspace functionality
 set backspace=indent,eol,start
 
 " Set spacing to default to spaces
 set tabstop=2 shiftwidth=2 expandtab
 
-"Prettier
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html $
-" print semicolons
-" Prettier default: true
-let g:prettier#config#semi = 'true'
+" FINDING FILES
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
 
-" JavaScript syntax
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
-
-" Emmet for autocomplete
-let g:user_emmet_leader_key='<Tab>'
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \}
+" Display all matching files when we tab complete
+set wildmenu
 
 " Vim-plug plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -59,6 +47,26 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 call plug#end()
+
+"Prettier
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html $
+" print semicolons
+" Prettier default: true
+let g:prettier#config#semi = 'true'
+
+" JavaScript syntax
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+
+" Emmet for autocomplete
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
 
 " Vim-airline
 let g:airline_powerline_fonts = 1
