@@ -26,6 +26,11 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
+" AUTOCOMPLETE
+" - ^x^n for just the current file
+" - ^x^f for filenames (works with our path)
+" - ^n and ^p for moving next and prev in a list
+
 " Vim-plug plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
