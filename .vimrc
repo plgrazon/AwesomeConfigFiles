@@ -18,6 +18,22 @@ set backspace=indent,eol,start
 " Set spacing to default to spaces
 set tabstop=2 shiftwidth=2 expandtab
 
+" Changing cursor shape per mode
+" 1 or 0 -> blinking block
+" 2 -> solid block
+" 3 -> blinking underscore
+" 4 -> solid underscore
+if exists('$TMUX')
+" tmux will only forward escape sequences to the terminal if surrounded by a DCS sequence
+  let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>[4 q\<Esc>\\"
+  let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>[2 q\<Esc>\\"
+  autocmd VimLeave * silent !echo -ne "\033Ptmux;\033\033[0 q\033\\"
+else
+  let &t_SI .= "\<Esc>[4 q"
+  let &t_EI .= "\<Esc>[2 q"
+  autocmd VimLeave * silent !echo -ne "\033[0 q"
+endif
+
 " FINDING FILES
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
@@ -42,6 +58,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
+Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -53,6 +70,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 call plug#end()
+
+" YouCompleteMe
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Git Gutter"
 set updatetime=250
@@ -80,7 +101,7 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 
 " Emmet for autocomplete
-let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_leader_key=','
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
     \      'extends' : 'jsx',
