@@ -92,10 +92,17 @@ highlight GitGutterChangeDelete ctermfg=4
 let g:prettier#exec_cmd_async = 1
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync 
 " print semicolons
 " Prettier default: true
 let g:prettier#config#semi = 'false'
+" run and keep cursor position
+function! KeepWindowAndCursorPos()
+  let cursor_pos = getpos('.')
+  PrettierAsync
+  call setpos('.', cursor_pos)
+endfunction
+
+autocmd BufWritePre * call KeepWindowAndCursorPos()
 
 " JavaScript syntax
 let g:javascript_plugin_jsdoc = 1
