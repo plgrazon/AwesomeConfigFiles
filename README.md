@@ -69,3 +69,7 @@ Config files for .profile, .bashrc, .zsh, .vimrc, .tmux.config
     - create a folder named: ~/.todo.actions.d
     - chmod +x ~/.todo.actions.d/<action>
     - use dostounix to excute file (Mac)
+
+### Homebrew
+
+- icdiff
