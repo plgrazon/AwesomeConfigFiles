@@ -18,6 +18,13 @@ set backspace=indent,eol,start
 " Set spacing to default to spaces
 set tabstop=2 shiftwidth=2 expandtab
 
+" Set column for character limit
+set colorcolumn=80
+highlight ColorColumn ctermbg=darkgray
+
+" Set no text wrap
+set nowrap
+
 " Changing cursor shape per mode
 " 1 or 0 -> blinking block
 " 2 -> solid block
